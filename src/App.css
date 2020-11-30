@@ -1,0 +1,138 @@
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #ecf0f1;
+  overflow-y: auto;
+  background-image: url('./img/bg.PNG');
+  background-position: center;
+}
+.App-header {
+  background-color: #1abc9c;
+  padding: 1.2em 1em;
+  
+}
+
+.App-header h1 {
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  margin: 4em auto;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: #fff;
+  display: inline-block;
+  margin-right: 40px;
+  margin-bottom: 60px;
+  align-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: .5em;
+  position: relative;
+  z-index: 1;
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+  transition:transform .15s linear;
+}
+
+.box:nth-child(even) {
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  transform:rotate(4deg);
+}
+
+.box:nth-child(odd) {
+  -o-transform:rotate(-4deg);
+  -webkit-transform:rotate(-4deg);
+  -moz-transform:rotate(-4deg);
+  transform:rotate(-4deg);
+}
+
+.box:hover{
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.5);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.5);
+  box-shadow:10px 10px 7px rgba(0,0,0,.5);
+  -webkit-transform: scale(1.20);
+  -moz-transform: scale(1.20);
+  -o-transform: scale(1.20);
+  position:relative;
+  z-index:5;
+}
+
+.box-header {
+  margin-bottom: .5em;
+}
+
+.box::before{
+  content: '';
+  top: -10px;
+  left: -20px;
+  width: 50px;
+  height: 30px;
+  background-color: rgba(241, 196, 15, .5);
+  position: absolute;
+  transform: rotate(-50deg);
+  z-index: 3;
+  display: block;
+}
+
+.box .stick {
+  height: 30px;
+  width: 100px;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.input textarea {
+  width: 100%;
+  padding: .4em;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.box-footer {
+  text-align: end;
+}
+
+.box-header h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.box p {
+  line-height: 20px;
+  font-family: 'Itim', cursive;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 2em;
+  color: #34495e;
+}
+
+@media screen and (min-width: 700px) {
+
+  .boxes {
+    flex-direction: row;
+    flex-flow: wrap;
+  }
+
+}
