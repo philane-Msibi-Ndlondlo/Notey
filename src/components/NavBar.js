@@ -3,7 +3,7 @@ import React from 'react'
 const NavBar = () => {
     return (
         <header className="App-header">
-            <h1>Notey</h1>
+            <h1>Noteey</h1>
         </header>
     )
 }
