@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
-import { Button, Icon, Modal } from 'semantic-ui-react';
 import Box from './components/Box';
 
 function App() {
